@@ -1,0 +1,4 @@
+Model,Accuracy,Macro Precision,Macro Recall,Macro F1
+Majority Baseline,0.25,0.0357,0.1429,0.0571
+Rule-Based Baseline,0.425,0.7361,0.3976,0.3915
+Gemini Agent,0.6666666666666666,0.5833333333333334,0.5833333333333334,0.5555555555555555
