@@ -175,3 +175,11 @@ These examples show that short, indirect, and context-dependent customer message
 - Reply quality and intent-classification accuracy are evaluated separately; a correct intent prediction does not necessarily guarantee a high-quality customer reply.
 
 For implementation decisions, see [Decision Log](decision_log.md).
+
+## Future Improvements
+
+- Expand the Gemini evaluation set beyond the current saved sample and evaluate it on a larger, consistently sampled subset.
+- Improve intent classification for short and ambiguous customer messages using stronger intent-specific examples and retrieval context.
+- Improve historical retrieval so that the selected past conversation is more closely matched to the customer’s issue.
+- Expand human evaluation of generated replies and measure agreement with the LLM judge on a larger sample.
+- Test the escalation policy more thoroughly on edge cases involving billing, account-specific issues, and unclear requests.
