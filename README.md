@@ -173,3 +173,5 @@ These examples show that short, indirect, and context-dependent customer message
 - The historical retrieval set contains 1,000 SpotifyCares conversation pairs rather than the full dataset.
 - Intent classification can be difficult for short, ambiguous, or context-dependent customer messages.
 - Reply quality and intent-classification accuracy are evaluated separately; a correct intent prediction does not necessarily guarantee a high-quality customer reply.
+
+For implementation decisions, see [Decision Log](decision_log.md).
