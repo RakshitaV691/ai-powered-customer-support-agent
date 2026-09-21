@@ -99,6 +99,14 @@ Google Gemini is used for:
 
 The generated reply is instructed to remain grounded in the retrieved historical examples and avoid inventing account-specific information.
 
+## Setup and Usage
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Baselines
 
 Two simple baselines were implemented to provide reference points for the AI agent.
