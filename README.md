@@ -135,6 +135,10 @@ The rule-based baseline correctly classified 85 out of 200 examples.
 
 The Gemini-based agent was evaluated on 9 saved examples because live API evaluation was limited by Gemini service availability. The results are reported separately from the full 200-example baseline evaluation.
 
+## What Is Misleading About My Headline Number?
+
+The Gemini agent achieved 66.67% accuracy on the saved evaluation sample. However, this number should not be interpreted as production-level accuracy or as a direct comparison with the baselines. The Gemini result is based on only 9 saved examples because live API evaluation was limited by Gemini service availability, while the majority and rule-based baselines were evaluated on the full 200-example golden set. The small Gemini sample therefore provides an initial signal rather than a statistically strong estimate of generalization.
+
 ## Evaluation
 
 A hand-labelled golden set of 200 customer messages is used for evaluation.
