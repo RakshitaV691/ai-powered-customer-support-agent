@@ -160,13 +160,29 @@ In addition to automated intent metrics, an LLM-as-judge evaluation was performe
 
 The Gemini agent correctly classified 6 of the 9 saved evaluation examples and incorrectly classified 3.
 
-Observed failure patterns include:
+Top failure modes observed:
 
-- Content Availability was sometimes classified as Other/General when the customer message was short or conversational.
-- A Playback complaint was classified as Content Availability when the message discussed songs in the user's library and the surrounding context was ambiguous.
-- A short acknowledgement related to Subscription/Payment was classified as Other/General because the customer message alone did not clearly express the underlying intent.
+1. **Short or conversational Content Availability messages**
+   - Example: A customer acknowledgement related to content availability was classified as Other/General.
+   - Hypothesis: The message did not contain enough explicit content-related keywords for the model to identify the underlying intent.
 
-These examples show that short, indirect, and context-dependent customer messages remain challenging for intent classification.
+2. **Ambiguous Playback vs. Content Availability**
+   - Example: A Playback-related message discussing songs in the user's library was classified as Content Availability.
+   - Hypothesis: References to songs and library content can overlap between playback problems and availability questions.
+
+3. **Indirect Subscription/Payment messages**
+   - Example: A short acknowledgement related to a subscription/payment conversation was classified as Other/General.
+   - Hypothesis: The customer's message alone did not clearly state the underlying billing or subscription issue.
+
+4. **General messages with insufficient intent evidence**
+   - Example: Very short messages such as acknowledgements can lack enough information to distinguish the underlying support intent.
+   - Hypothesis: The agent primarily sees the current customer message, so important context from earlier turns may be unavailable.
+
+5. **Context-dependent intent boundaries**
+   - Example: Messages containing general references to songs, playlists, or account activity can be mapped to different intents depending on the surrounding conversation.
+   - Hypothesis: Several intent categories share vocabulary, so additional conversational context and stronger retrieval could improve classification.
+
+These failures suggest that the main weakness is not a single intent category, but the difficulty of classifying short, indirect, and context-dependent customer messages.
 
 ## Limitations
 
