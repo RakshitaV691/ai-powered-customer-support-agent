@@ -27,6 +27,20 @@ The agent uses seven support intents:
 | Feature Request | Requests or suggestions for new or changed functionality |
 | Other/General | Unclear requests, acknowledgements, or messages that do not fit another intent |
 
+## Problem Framing
+
+For Spotify customer support, a good agent should identify the customer's intent, provide a reply grounded in historically observed SpotifyCares responses, and route cases to a human when the issue is account-specific, sensitive, unclear, or requires actions the agent should not perform automatically.
+
+The goal of this project is to demonstrate a reproducible support-agent pipeline rather than build a production-ready customer service system.
+
+### What I Chose Not to Build
+
+- A production deployment or live customer-facing system.
+- Direct access to customer accounts or private information.
+- Automated refunds, billing changes, or other account-level actions.
+- Full multi-turn conversation management across the entire Twitter dataset.
+- Evaluation on the full multi-million-row dataset.
+
 ## Handling Policy
 
 The agent separates intent classification from the handling decision.
