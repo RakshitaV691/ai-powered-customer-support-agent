@@ -121,6 +121,12 @@ Install the required dependencies:
 pip install -r requirements.txt
 ```
 
+Run the evaluation pipeline:
+
+```bash
+python evaluate.py
+```
+
 ## Baselines
 
 Two simple baselines were implemented to provide reference points for the AI agent.
