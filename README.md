@@ -80,7 +80,7 @@ For this implementation:
 - The brand selected was SpotifyCares.
 - Historical Spotify customer-support conversations were extracted from the dataset.
 - A working set of 1,000 customer-message/reply pairs was used for historical retrieval.
-- A 200-example hand-labelled golden set was created for evaluation.
+- A 200-example golden set was sampled from the historical data and manually labelled using the seven-intent taxonomy and handling policy. Examples were kept roughly balanced across intents, including less frequent and ambiguous categories.
 - Duplicate customer messages were removed from the golden set.
 
 The golden set contains examples from all seven intent categories and includes the expected handling action and escalation reason where applicable.
