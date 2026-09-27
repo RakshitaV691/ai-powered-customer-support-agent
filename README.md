@@ -83,6 +83,8 @@ For this implementation:
 - A 200-example golden set was sampled from the historical data and manually labelled using the seven-intent taxonomy and handling policy. Examples were kept roughly balanced across intents, including less frequent and ambiguous categories.
 - Duplicate customer messages were removed from the golden set.
 
+**Source:** Customer Support on Twitter dataset, thoughtvector/customer-support-on-twitter (Kaggle).
+
 The golden set contains examples from all seven intent categories and includes the expected handling action and escalation reason where applicable.
 
 ## System Approach
